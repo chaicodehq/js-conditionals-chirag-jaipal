@@ -31,5 +31,181 @@
  * @returns {number} Total price or -1 for invalid input
  */
 export function calculateCoffeePrice(size, type, extras = {}) {
-  // Your code here
+  if (size !== "small" && size !== "medium" && size !== "large") return -1;
+  if (type !=="regular" && type !== "latte" && type !== "cappuccino" && type !== "mocha") return -1;
+
+  if (size === "small") {
+    if (type === "regular") {
+      if (extras.whippedCream === true && extras.extraShot === true) {
+        return 4.25;
+      }
+      else if (extras.whippedCream === true) {
+        return 3.50;
+      }
+      else if (extras.extraShot === true) {
+        return 3.75;
+      }
+      else {
+        return 3.00;
+      }
+    }
+    else if (type === "latte") {
+      if (extras.whippedCream === true && extras.extraShot === true) {
+        return 5.25;
+      }
+      else if (extras.whippedCream === true) {
+        return 4.50;
+      }
+      else if (extras.extraShot === true) {
+        return 4.75;
+      }
+      else {
+        return 4.00;
+      }
+    }
+    else if (type === "cappuccino") {
+      if (extras.whippedCream === true && extras.extraShot === true) {
+        return 5.75;
+      }
+      else if (extras.whippedCream === true) {
+        return 5.00;
+      }
+      else if (extras.extraShot === true) {
+        return 5.25;
+      }
+      else {
+        return 4.50;
+      }
+    }
+    else {
+      if (extras.whippedCream === true && extras.extraShot === true) {
+        return 6.25;
+      }
+      else if (extras.whippedCream === true) {
+        return 5.50;
+      }
+      else if (extras.extraShot === true) {
+        return 5.75;
+      }
+      else {
+        return 5.00;
+      }
+    }
+  }
+  else if (size === "medium") {
+    if (type === "regular") {
+      if (extras.whippedCream === true && extras.extraShot === true) {
+        return 5.25;
+      }
+      else if (extras.whippedCream === true) {
+        return 4.50;
+      }
+      else if (extras.extraShot === true) {
+        return 4.75;
+      }
+      else {
+        return 4.00;
+      }
+    }
+    else if (type === "latte") {
+      if (extras.whippedCream === true && extras.extraShot === true) {
+        return 6.25;
+      }
+      else if (extras.whippedCream === true) {
+        return 5.50;
+      }
+      else if (extras.extraShot === true) {
+        return 5.75;
+      }
+      else {
+        return 5.00;
+      }
+    }
+    else if (type === "cappuccino") {
+      if (extras.whippedCream === true && extras.extraShot === true) {
+        return 6.75;
+      }
+      else if (extras.whippedCream === true) {
+        return 6.00;
+      }
+      else if (extras.extraShot === true) {
+        return 6.25;
+      }
+      else {
+        return 5.50;
+      }
+    }
+    else {
+      if (extras.whippedCream === true && extras.extraShot === true) {
+        return 7.25;
+      }
+      else if (extras.whippedCream === true) {
+        return 6.50;
+      }
+      else if (extras.extraShot === true) {
+        return 6.75;
+      }
+      else {
+        return 6.00;
+      }
+    }
+  }
+  else {
+    if (type === "regular") {
+      if (extras.whippedCream === true && extras.extraShot === true) {
+        return 6.25;
+      }
+      else if (extras.whippedCream === true) {
+        return 5.50;
+      }
+      else if (extras.extraShot === true) {
+        return 5.75;
+      }
+      else {
+        return 5.00;
+      }
+    }
+    else if (type === "latte") {
+      if (extras.whippedCream === true && extras.extraShot === true) {
+        return 7.25;
+      }
+      else if (extras.whippedCream === true) {
+        return 6.50;
+      }
+      else if (extras.extraShot === true) {
+        return 6.75;
+      }
+      else {
+        return 6.00;
+      }
+    }
+    else if (type === "cappuccino") {
+      if (extras.whippedCream === true && extras.extraShot === true) {
+        return 7.75;
+      }
+      else if (extras.whippedCream === true) {
+        return 7.00;
+      }
+      else if (extras.extraShot === true) {
+        return 7.25;
+      }
+      else {
+        return 6.50;
+      }
+    }
+    else {
+      if (extras.whippedCream === true && extras.extraShot === true) {
+        return 8.25;
+      }
+      else if (extras.whippedCream === true) {
+        return 7.50;
+      }
+      else if (extras.extraShot === true) {
+        return 7.75;
+      }
+      else {
+        return 7.00;
+      }
+    }
+  }
 }
